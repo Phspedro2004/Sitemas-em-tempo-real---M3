@@ -72,9 +72,7 @@ static void busy_5ms(void) {
 /////////////////////// JOB SORT (aperiódico baseado na M2) ///////////////////////
 void sort_job(void *arg) {
     int id = *(int *)arg;
-    printf("[SORT] Executando SORT_ACT id=%d\n", id);
-
-    // SORT da M2 levava ~5ms → vamos simular 5ms
+    printf("[SORT] Executando SORT_ACT id=%d\n", id); 
     busy_5ms();
 
     free(arg);
